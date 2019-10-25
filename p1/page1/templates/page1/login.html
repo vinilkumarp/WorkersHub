@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+<html>
+    <head>
+      {% block head %}
+        <title>login page</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'page1/color.css' %}" type="text/css">
+        <link rel="stylesheet" href="{% static 'page1/color.js' %}" type="text/js">
+        
+        {% endblock %}
+    </head> 
+    <body>
+      {% block body %}
+
+    <div class="login-page">
+    <div class="form">
+      <form class="login-form" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit"> login </button>
+        <p class="message">Don't have an account? <a href="/page1/register">Create an account</a></p>
+
+      </form>
+    </div>
+    </div>
+    {% endblock %}
+  </body>
+</html>

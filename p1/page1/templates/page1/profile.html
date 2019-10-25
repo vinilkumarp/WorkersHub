@@ -1,0 +1,32 @@
+{% extends 'base.html'%}
+    {% block head %}
+        <title>profile page</title>
+        {% load static %}
+        <link href="{% static 'page1/color.css' %}" rel="stylesheet" type="text/css" media="all" />
+        <link href="{% static 'page1/color.js' %}" rel="stylesheet" type="text/js" media="all" />
+
+    {% endblock %}
+    <body>
+    {% block body %}
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+    <div class="form">
+        username: {{ user }} <br><br>
+
+       first name: {{ user.first_name }}<br><br>
+
+       last name: {{ user.last_name }}<br><br>
+
+        email: {{ user.email }}<br><br>
+
+    </div>
+    
+
+    {% endblock %}
+</body>
